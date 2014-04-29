@@ -1,0 +1,64 @@
+<html>
+
+	<head>
+		<title>Login</title>
+	</head>
+	<style>
+		body {
+    		position: relative;
+   			font-family: Helvetica, Arial, sans-serif;
+		    font-size: 14px;
+		    width: 800px;
+		    margin: 0 auto;
+		    padding: 10px;
+		    color: #333;
+		}
+		.error {
+		    color: red;
+		}
+		label {
+		  display: block;
+		  font-size: 20px;
+		}
+		input[type=text] {
+		    width: 500px;
+		    font-size: 20px;
+		    padding: 2px;
+		    font-family: monospace;
+		}
+		input[type=submit] {
+  			font-size: 24px;
+		}
+		.main-title {
+		    display: block;
+		    color: #222;
+		    font-size: 40px;
+		    font-weight: bold;
+		    text-align: center;
+		    margin-bottom: 30px;
+		    text-decoration: none;
+		}
+	</style>
+	<body>
+
+		<form method="post">
+
+			<a href="/login" class="main-title"> Login </a>
+
+
+				<label> Username
+					<input type="text" name="username" value="{{username}}">
+				</label>
+
+				<label> Password
+					<input type="password" name="password">
+				</label>
+				<br>
+
+				<div class="error"> {{login_error}} </div> <br><br>
+
+			<input type="submit">
+
+		</form>
+	</body>
+</html>
